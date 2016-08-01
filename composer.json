@@ -1,0 +1,54 @@
+{
+    "name": "Siokas/Laryr",
+    "type": "library",
+    "description": ":package_description",
+    "keywords": [
+        "Siokas",
+        "Laryr",
+        "Laravel",
+        "Routes",
+        "Yaml"
+    ],
+    "homepage": "https://github.com/siokas/Laryr",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Apostolos Siokas",
+            "email": "apostolossiokas@gmail.com",
+            "homepage": "https://github.com/siokas/Laryr",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/support": "~5.1",
+        "php" : "~5.5|~7.0",
+        "symfony/yaml": "^3.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~4.0||~5.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Siokas\\Laryr\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Siokas\\Laryr\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "format": "phpcbf --standard=psr2 src/"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

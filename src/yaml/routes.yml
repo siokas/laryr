@@ -1,0 +1,4 @@
+-
+	name: laryr
+	controller: AppController
+	method: index
