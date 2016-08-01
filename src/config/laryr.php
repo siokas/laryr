@@ -2,6 +2,5 @@
 
 return [
 
-    'routes-yaml-path' => '/',
-
+    'path' => base_path('routes.yml'),
 ];

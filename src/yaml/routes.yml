@@ -1,4 +1,5 @@
 -
-	name: laryr
+	route: test
+	method: get
 	controller: AppController
-	method: index
+	function: index

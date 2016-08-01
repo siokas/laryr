@@ -1,41 +1,68 @@
-# :package_name
+# Laryr (Laravel Yaml Routes)
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
-[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
-[![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_website``` ```:author_email``` ```:vendor``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line.
+This package helps Laravel users to add easy and quick simple routes to its app. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality only for simple routes and planing for a future update to also include route groups and more complex routes with where statements.
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+The package supports functionality for:
+- Routes with all methods (get, post, put, patch, delete, resource)
+- Route Name
+- Middleware
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+composer require siokas/laryr
 ```
+
+After the installation you should regirster the ServiceProvider to the config/app.php file. Add the following line in the __providers__ array.
+
+``` php
+Siokas\Laryr\LaryrServiceProvider::class,
+```
+
+Now you should publish the unpublished files. Open terminal and type:
+
+``` bash
+php artisan vendor:publish
+```
+
+This command will publish a yaml file at the root directory of your app, called __routes.yml__ and a configuration file in config directory called __laryr.php__.
 
 ## Usage
 
-``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+Open the __routes.yml__ file and enter your application routes in a collection type. 
+
+``` yml
+-
+	route: test
+	method: get
+	controller: AppController
+	function: index
+
+```
+
+This will create a route which points to the specified Controller and function.
+
+__Note 1:__ If you want to change the name and the path of the __routes.yml__ file, you have to specify the new path in the config/laryr.php file.
+
+__Note 2:__ Nested functions are not supported on the yaml file.
+
+## Options
+
+There are two options in the routes which are listed below:
+
+``` yml
+	name: routeName
+	middleware: auth
+
 ```
 
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
 
 ## Contributing
 
@@ -45,10 +72,9 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 
 If you discover any security related issues, please email :author_email instead of using the issue tracker.
 
-## Credits
+## Libraries
 
-- [:author_name][link-author]
-- [All Contributors][link-contributors]
+- [Symfony/Yaml](https://github.com/symfony/yaml) 
 
 ## License
 
