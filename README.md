@@ -11,6 +11,8 @@ The package supports functionality for:
 - Route Name
 - Middleware
 
+__Note:__ Tested and works fine on Laravel 5.3
+
 ## Install
 
 Via Composer
@@ -69,18 +71,3 @@ There are two options in the routes which are listed below:
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-[ico-version]: https://img.shields.io/packagist/v/siokas/:package_name.svg?style=flat-square
-[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/:vendor/:package_name/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/:vendor/:package_name.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/:vendor/:package_name.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square
-
-[link-packagist]: https://packagist.org/packages/:vendor/:package_name
-[link-travis]: https://travis-ci.org/:vendor/:package_name
-[link-scrutinizer]: https://scrutinizer-ci.com/g/:vendor/:package_name/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/:vendor/:package_name
-[link-downloads]: https://packagist.org/packages/siokas/laryr
-[link-author]: https://github.com/siokas
-[link-contributors]: ../../contributors
