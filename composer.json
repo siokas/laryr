@@ -1,7 +1,7 @@
 {
     "name": "siokas/laryr",
     "type": "library",
-    "description": ":package_description",
+    "description": "Helps Laravel users to add routes easily.",
     "keywords": [
         "Siokas",
         "Laryr",
