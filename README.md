@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/siokas/laryr/v/stable)](https://packagist.org/packages/siokas/laryr)
 [![StyleCI](https://styleci.io/repos/64726308/shield)](https://styleci.io/repos/64726308)
-[![Software License][ico-license]](LICENSE.md)
+[![Software License](LICENSE.md)
 
 This package helps Laravel users to add routes easily. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality only for simple routes and planing for a future update to also include route groups and more complex routes with where statements.
 
