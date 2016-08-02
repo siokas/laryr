@@ -60,18 +60,6 @@ There are two options in the routes which are listed below:
 
 ```
 
-## Change log
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
-
-## Security
-
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
-
 ## Libraries
 
 - [Symfony/Yaml](https://github.com/symfony/yaml) 
