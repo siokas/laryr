@@ -24,8 +24,6 @@ class Laryr
      */
     public function getRoutesFromYaml()
     {
-
         return $this->routesFromYaml;
     }
-
 }

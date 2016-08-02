@@ -30,7 +30,6 @@ class LaryrServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/yaml/routes.yml' => base_path('routes.yml'),
         ]);
-
     }
 
     /**
@@ -44,5 +43,4 @@ class LaryrServiceProvider extends ServiceProvider
             'config/laryr.php',
         ]);
     }
-
 }
