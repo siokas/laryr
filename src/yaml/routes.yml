@@ -1,5 +1,5 @@
 -
-	route: test
-	method: get
-	controller: AppController
-	function: index
+  route: test
+  method: get
+  controller: AppController
+  function: index
