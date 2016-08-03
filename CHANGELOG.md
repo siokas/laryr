@@ -8,3 +8,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Added
 - Yaml Routes for Laravel PHP Framework
+
+## [0.5.0] - 2016-08-03
+
+### Added
+- Functionality to support route groups
+- Artisan Command make:yaml 
+
+### Changed 
+- config/laryr.php file includes two items: path, filename

@@ -39,6 +39,8 @@ class LaryrServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->commands('Siokas\Laryr\Commands\MakeYamlFile');
+
         config([
             'config/laryr.php',
         ]);

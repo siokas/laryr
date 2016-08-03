@@ -2,5 +2,6 @@
 
 return [
 
-    'path' => base_path('routes.yml'),
+    'path' => base_path(),
+    'filename' => 'routes.yml',
 ];
