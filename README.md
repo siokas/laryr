@@ -80,7 +80,7 @@ There are two options in the routes which are listed below:
   middleware: auth
 ```
 
-For the route groups you have more options to specify:
+For the route groups there are more available options to specify:
 
 ``` yml
   name: test
