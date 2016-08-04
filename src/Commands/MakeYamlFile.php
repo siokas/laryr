@@ -41,7 +41,7 @@ class MakeYamlFile extends Command
      */
     public function handle()
     {
-        $path = $this->getPath();
+        $this->getPath();
         $filename = $this->argument('name') . '.yml';
 
         $this->saveFile($filename);
