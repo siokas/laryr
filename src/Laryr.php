@@ -6,7 +6,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class Laryr
 {
-    protected $routesFromYaml;
+    protected $path;
 
     /**
      * Create a new Laryr Instance.
@@ -14,7 +14,7 @@ class Laryr
      */
     public function __construct($path)
     {
-        $this->routesFromYaml = Yaml::parse(file_get_contents($path));
+        $this->path = $path;
     }
 
     /**
@@ -24,6 +24,8 @@ class Laryr
      */
     public function getRoutesFromYaml()
     {
-        return $this->routesFromYaml;
+        $routesFromYaml = Yaml::parse(file_get_contents($this->path));
+
+        return $routesFromYaml;
     }
 }

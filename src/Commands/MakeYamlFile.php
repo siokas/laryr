@@ -41,14 +41,19 @@ class MakeYamlFile extends Command
      */
     public function handle()
     {
-        $path = Config::get('laryr.path', base_path());
+        $path = $this->getPath();
         $filename = $this->argument('name') . '.yml';
-        $fullpath = $path . '/' . $filename;
 
-        // dd($fullpath);
+        $this->saveFile($filename);
+    }
 
-        $contents = "-";
+    public function getPath()
+    {
+        return Config::get('laryr.path', base_path());
+    }
 
+    public function saveFile($filename)
+    {
         File::put(base_path() . '/' . $filename, '-');
         $this->info('The file ' . $filename . ' created!');
     }
