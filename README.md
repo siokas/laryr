@@ -3,7 +3,7 @@
 [![Latest Stable Version](https://poser.pugx.org/siokas/laryr/v/stable)](https://packagist.org/packages/siokas/laryr)
 [![StyleCI](https://styleci.io/repos/64726308/shield)](https://styleci.io/repos/64726308)
 
-This package helps Laravel users to add routes easily. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality only for simple routes and planing for a future update to also include more complex routes with where statements.
+This package helps Laravel users to add routes easily. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality for simple routes and group routes. The plan for a future update is to include more complex routes with where statements.
 
 The package supports functionality for:
 - Routes with all methods (get, post, put, patch, delete, resource)
