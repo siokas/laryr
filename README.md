@@ -3,12 +3,13 @@
 [![Latest Stable Version](https://poser.pugx.org/siokas/laryr/v/stable)](https://packagist.org/packages/siokas/laryr)
 [![StyleCI](https://styleci.io/repos/64726308/shield)](https://styleci.io/repos/64726308)
 
-This package helps Laravel users to add routes easily. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality only for simple routes and planing for a future update to also include route groups and more complex routes with where statements.
+This package helps Laravel users to add routes easily. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality only for simple routes and planing for a future update to also include more complex routes with where statements.
 
 The package supports functionality for:
 - Routes with all methods (get, post, put, patch, delete, resource)
 - Route Name
 - Middleware
+- (new) Route Groups
 
 __Note:__ Tested and works fine on Laravel 5.3
 
@@ -40,28 +41,58 @@ Open the __routes.yml__ file and enter your application routes in a collection t
 
 ``` yml
 -
-	route: test
-	method: get
-	controller: AppController
-	function: index
+  route: test
+  method: get
+  controller: AppController
+  function: index
 
 ```
 
 This will create a route which points to the specified Controller and function.
 
-__Note 1:__ If you want to change the name and the path of the __routes.yml__ file, you have to specify the new path in the config/laryr.php file.
+__Note 1:__ If you want to change the name and the path of the __routes.yml__ file, you have to specify the new path and filename in the config/laryr.php file.
 
 __Note 2:__ Nested functions are not supported on the yaml file.
+
+To create a route group you have to add a route with method as __group__ and name your route.
+
+``` yml
+-
+  method: group
+  name: groupRoutes
+
+```
+
+Then you have to create a .yml file in the same directory with the __routes.yml__ file. This file has to have the same name that you spesified in the previous step. To create that file, open the terminal and type the make artisan command:
+
+``` bash
+php artisan make:yaml groupRoutes
+```
+
+In this file you can specify the routes you want in the same way.
 
 ## Options
 
 There are two options in the routes which are listed below:
 
 ``` yml
-	name: routeName
-	middleware: auth
-
+  name: routeName
+  middleware: auth
 ```
+
+For the route groups you have more options to specify:
+
+``` yml
+  name: test
+  domain: {account}.app.dev
+  prefix: user
+  namespace: UsersAccount
+```
+
+## Tutorial
+
+The following link contains a nice fully tutorial on how to use the package to your project:
+[https://www.siokas.com/post/laryr/](https://www.siokas.com/post/laryr/) 
 
 ## Libraries
 

@@ -11,7 +11,7 @@ $laryr = new Laryr($fullpath);
 $routes = $laryr->getRoutesFromYaml();
 
 foreach ($routes as $route) {
-    if ($route['method'] == 'group') {
+    if (isset($route['method']) && $route['method'] == 'group') {
         $groupPath = $path . '/' . $route['name'] . '.yml';
         $group = new Laryr($groupPath);
         $groupRoutes = $group->getRoutesFromYaml();
