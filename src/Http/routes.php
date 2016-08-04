@@ -34,7 +34,7 @@ foreach ($routes as $route) {
                 ]);
             }
         });
-    } else if (isset($route['route']) && isset($route['controller'])) {
+    } elseif (isset($route['route']) && isset($route['controller'])) {
         $method = isset($route['method']) ? $route['method'] : 'get';
         $function = isset($route['function']) ? $route['function'] : 'index';
 
