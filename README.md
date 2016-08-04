@@ -2,6 +2,8 @@
 
 [![Latest Stable Version](https://poser.pugx.org/siokas/laryr/v/stable)](https://packagist.org/packages/siokas/laryr)
 [![StyleCI](https://styleci.io/repos/64726308/shield)](https://styleci.io/repos/64726308)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/632bec28cca4469cbeb72abd90757d0d)](https://www.codacy.com/app/apostolossiokas/laryr?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=siokas/laryr&amp;utm_campaign=Badge_Grade)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/siokas/laryr/master/LICENSE.md)
 
 This package helps Laravel users to add routes easily. There will be a yaml on your project in which you have the option to specify the routes. Currently the package provides functionality for simple routes and group routes. The plan for a future update is to include more complex routes with where statements.
 
